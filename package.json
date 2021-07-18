@@ -9,5 +9,13 @@
   "dependencies": {
     "graphql-request": "^3.4.0",
     "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "^7.0.36",
+    "postcss-import": "^13.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
   }
 }
