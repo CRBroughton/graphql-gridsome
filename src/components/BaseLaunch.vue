@@ -1,8 +1,11 @@
 
 <template>
   <div>
-    <div v-for="(launch, index) in launches[0]" :key="launch.id">
-      <p>{{ launch }} -- {{ index }}</p>
+    <div v-for="(launch) in launches[0]" :key="launch.id">
+      <p>{{ launch.mission_name }}</p>
+      <p>{{ launch.launch_year }}</p>
+      <img :src="launch.links.flickr_images" alt="" style="width: 350px">
+    <a :href="launch.links.article_link">{{ launch.links.article_link }}</a>
     </div>
   </div>
 </template>
@@ -19,10 +22,9 @@ export default {
   async mounted() {
     const client = new GraphQLClient("http://api.spacex.land/graphql/");
     const launches = await client.request(
-      " { launchesPast(limit: 10) { mission_name }  }"
+      " { launchesPast(limit: 10) { launch_success launch_year links { article_link flickr_images } mission_name rocket { rocket_name } } } "
     );
     this.launches.push(launches.launchesPast);
-    console.log(JSON.stringify(this.launches[0]));
   },
 };
 </script>
