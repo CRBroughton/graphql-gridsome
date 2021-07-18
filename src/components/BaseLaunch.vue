@@ -24,7 +24,11 @@ export default {
     const launches = await client.request(
       " { launchesPast(limit: 10) { launch_success launch_year links { article_link flickr_images } mission_name rocket { rocket_name } } } "
     );
-    this.launches.push(launches.launchesPast);
+
+      const filteredLaunches = launches.launchesPast.filter(iterator => iterator.links.flickr_images.length > 0)
+      this.launches.push(filteredLaunches)
+      console.log("test", this.launches)
+
   },
 };
 </script>
