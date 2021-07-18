@@ -1,11 +1,12 @@
 
 <template>
-  <div>
-    <div v-for="(launch) in launches[0]" :key="launch.id">
+  <div class="">
+    <div v-for="launch in launches[0]" :key="launch.id" class="w-96">
+      <img :src="launch.links.flickr_images" alt="" />
+      <a :href="launch.links.article_link">{{launch.links.article_link}}</a>
       <p>{{ launch.mission_name }}</p>
       <p>{{ launch.launch_year }}</p>
-      <img :src="launch.links.flickr_images" alt="" style="width: 350px">
-    <a :href="launch.links.article_link">{{ launch.links.article_link }}</a>
+      <!-- <a :href="launch.links.article_link">{{ launch.links.article_link }}</a> -->
     </div>
   </div>
 </template>
