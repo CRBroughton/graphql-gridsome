@@ -19,9 +19,15 @@
 </template>
 
 <script>
+import {GraphQLClient} from 'graphql-request';
 export default {
   metaInfo: {
     title: 'Hello, world!'
+  },
+    async mounted() {
+    const client = new GraphQLClient('http://api.spacex.land/graphql/');
+    const countries = await client.request(' { launchesPast { mission_name }  }');
+    console.log(countries)
   }
 }
 </script>
