@@ -1,6 +1,7 @@
 <template>
   <Layout>
 
+
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
@@ -14,21 +15,17 @@
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
     </p>
-
+    <base-launch />
   </Layout>
 </template>
 
-<script>
-import {GraphQLClient} from 'graphql-request';
+<script lang="ts">
+import BaseLaunch from '../components/BaseLaunch.vue';
+
 export default {
-  metaInfo: {
-    title: 'Hello, world!'
+    components: {
+    BaseLaunch,
   },
-    async mounted() {
-    const client = new GraphQLClient('http://api.spacex.land/graphql/');
-    const countries = await client.request(' { launchesPast { mission_name }  }');
-    console.log(countries)
-  }
 }
 </script>
 
