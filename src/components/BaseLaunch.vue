@@ -26,10 +26,10 @@ export default {
       " { launchesPast { launch_success launch_year links { article_link flickr_images } mission_name rocket { rocket_name } } } "
     );
 
-      const filteredLaunches = launches.launchesPast.filter(iterator => iterator.links.flickr_images.length > 0)
-      this.launches.push(filteredLaunches)
-      console.log("test", this.launches)
-
+    const filteredLaunches = launches.launchesPast.filter(
+      (iterator) => iterator.links.flickr_images.length > 0
+    );
+    this.launches.push(filteredLaunches);
   },
 };
 </script>
