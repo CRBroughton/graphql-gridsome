@@ -1,14 +1,14 @@
 
 <template>
-  <div class="">
-    <div v-for="launch in launches[0]" :key="launch.id" class="w-96">
-      <img :src="launch.links.flickr_images" alt="" />
-      <a :href="launch.links.article_link">{{launch.links.article_link}}</a>
-      <p>{{ launch.mission_name }}</p>
-      <p>{{ launch.launch_year }}</p>
-      <!-- <a :href="launch.links.article_link">{{ launch.links.article_link }}</a> -->
+  <div class="grid grid-cols-1 max-w-screen-sm">
+    <div
+      v-for="launch in launches[0]"
+      :key="launch.id"
+      class="text-white flex flex-col border-4 border-gray-200"
+    >
+        <img v-lazy="launch.links.flickr_images[0]" />
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
