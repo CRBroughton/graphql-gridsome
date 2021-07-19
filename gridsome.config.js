@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'SpaceX - GraphQL',
+  siteName: 'GraphQL Demo',
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",

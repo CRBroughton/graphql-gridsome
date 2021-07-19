@@ -17,6 +17,15 @@ export default {
     BaseLaunch,
     TheFooter,
   },
+  metaInfo: {
+    title: 'SpaceX',
+    meta: [
+      {
+        name: 'author',
+        content: 'Craig Broughton'
+      }
+    ],
+  }
 };
 </script>
 
