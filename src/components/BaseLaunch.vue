@@ -30,7 +30,7 @@ export default {
   async mounted() {
     const client = new GraphQLClient("http://api.spacex.land/graphql/");
     const launches = await client.request(
-      " { launchesPast { launch_success launch_year links { article_link flickr_images } mission_name rocket { rocket_name } } } "
+      " { launchesPast { launch_year links { article_link flickr_images } mission_name } } "
     );
 
     const filteredLaunches = launches.launchesPast.filter(
