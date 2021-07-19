@@ -2,6 +2,8 @@
 
 This project shows a simple demonstration of [GraphQL](https://graphql.org/) and [Vue](https://vuejs.org/) (built with [Gridsome](https://gridsome.org/) and [Tailwind](https://tailwindcss.com/)).
 
+You can find a live version at [https://graphql.crbroughton.me/](https://graphql.crbroughton.me/)
+
 [vue-lazyload](https://github.com/hilongjw/vue-lazyload) is used to ensure images are only loaded when the users viewport is close to the image.
 
 The project relies on [GraphQL](https://graphql.org/) to fetch image URLS, article URLS and the year of the mission.
