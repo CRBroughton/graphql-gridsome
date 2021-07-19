@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-gray-800 text-white">
+  <div class="flex flex-col bg-gray-800 text-white p-2">
     <base-launch
       class="mx-auto"
     />
@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 
 import BaseLaunch from "../components/BaseLaunch.vue";
 import TheFooter from "../components/TheFooter.vue";
