@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <base-launch />
+  <div class="flex flex-col bg-gray-800 text-white">
+    <base-launch
+      class="mx-auto"
+    />
+    <the-footer />
   </div>
 </template>
 
