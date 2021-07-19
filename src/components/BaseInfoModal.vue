@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div
+    v-if="showModal"
+    class="w-full bg-gray-700 flex flex-col bottom-2 p-4 text-sm rounded m-auto"
+  >
     <div v-if="launch.links.article_link" class="flex flex-col">
       <a class="mx-auto" :href="launch.links.article_link">Article Link</a>
     </div>
@@ -10,8 +13,15 @@
 
 <script>
 export default {
-  setup() {
-    return {};
+  props: {
+    launch: {
+      type: Object,
+      required: true,
+    },
+    showModal: {
+      type: Boolean,
+      required: true,
+    },
   },
 };
 </script>
