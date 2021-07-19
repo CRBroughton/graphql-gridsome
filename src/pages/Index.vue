@@ -5,11 +5,14 @@
 </template>
 
 <script lang="ts">
+
 import BaseLaunch from "../components/BaseLaunch.vue";
+import TheFooter from "../components/TheFooter.vue";
 
 export default {
   components: {
     BaseLaunch,
+    TheFooter,
   },
 };
 </script>
