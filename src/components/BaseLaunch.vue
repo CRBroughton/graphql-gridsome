@@ -28,7 +28,7 @@ export default {
     };
   },
   async mounted() {
-    const client = new GraphQLClient("http://api.spacex.land/graphql/");
+    const client = new GraphQLClient("https://api.spacex.land/graphql/");
     const launches = await client.request(
       " { launchesPast { launch_year links { article_link flickr_images } mission_name } } "
     );
